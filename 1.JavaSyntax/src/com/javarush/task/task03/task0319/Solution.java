@@ -1,21 +1,20 @@
-package com.javarush.task.task03.task0318;
+package com.javarush.task.task03.task0319;
 
 /* 
-План по захвату мира
+Предсказание на будущее
 */
 
 import com.sun.org.apache.xpath.internal.SourceTree;
-import javafx.scene.input.InputMethodTextRun;
 
 import java.io.*;
-import java.util.Iterator;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String year = bufferedReader.readLine();
         String name = bufferedReader.readLine();
-        System.out.print(name+" захватит мир через "+Integer.parseInt(year)+" лет. Му-ха-ха!");
+        String number1 = bufferedReader.readLine();
+        String number2 = bufferedReader.readLine();
+        System.out.print(name+" получает "+Integer.parseInt(number1)+" через "+Integer.parseInt(number2)+" лет.");
     }
 }
