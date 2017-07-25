@@ -11,6 +11,18 @@ import java.util.ArrayList;
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
-    }
+        ArrayList<String> list= new ArrayList<String>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i < 10; i++) {
+            list.add(bufferedReader.readLine());
+        }
+
+        int length = 0;
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i).length() <= list.get(i-1).length()){
+                System.out.println(i);
+            }
+        }
+   }
 }
 
