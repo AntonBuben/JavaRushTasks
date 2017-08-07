@@ -2,7 +2,7 @@ package com.javarush.task.task07.task0728;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Arrays;
 
 
 /* 
@@ -19,13 +19,22 @@ public class Solution {
 
         sort(array);
 
-        for (int i = array.length-1; i >=0 ; i--) {
-            System.out.println(array[i]);
-        }
+        for (int i : array)
+            System.out.println(i);
     }
 
     public static void sort(int[] array) {
         //напишите тут ваш код
         Arrays.sort(array);
+
+       // ArrayUtils.reverse(array);
+       // Collections.reverse(Arrays.asList(array));
+        int temp;
+        for (int i = 0; i < array.length/2; i++) {
+            temp = array[i];
+            array[i] = array[array.length-1-i];
+            array[array.length-1-i] = temp;
+        }
+
     }
 }
