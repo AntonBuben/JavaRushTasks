@@ -32,7 +32,7 @@ public class Solution {
         public DBObject initializeIdAndName(long id, String name) {
             this.id = id;
             this.name = name;
-            return User.this;
+            return this;
         }
 
         @Override
