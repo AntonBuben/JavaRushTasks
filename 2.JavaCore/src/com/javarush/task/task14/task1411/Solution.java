@@ -14,11 +14,12 @@ public class Solution {
         String key = null;
 
         //тут цикл по чтению ключей, пункт 1
+        while (true)
         {
             //создаем объект, пункт 2
 
             doWork(person); //вызываем doWork
-
+            break;
         }
     }
 
