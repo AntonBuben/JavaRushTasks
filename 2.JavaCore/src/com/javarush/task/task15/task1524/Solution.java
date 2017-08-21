@@ -3,12 +3,21 @@ package com.javarush.task.task15.task1524;
 /* 
 Порядок загрузки переменных
 Разберись, что и в какой последовательности инициализируется. Поставь брейкпойнты и используй дебаггер.
+static void init()
+Static block
+public static void main
+non-static block
+static void printAllFields
+0
+null
+Solution constructor
+static void printAllFields
+6
+First name
 */
 
 public class Solution {
-    static {
-        System.out.println("Static block");
-    }
+
 
     {
         System.out.println("non-static block");
@@ -20,6 +29,10 @@ public class Solution {
     public String name = "First name";
     static {
         init();
+    }
+
+    static {
+        System.out.println("Static block");
     }
 
     public Solution() {
@@ -38,7 +51,9 @@ public class Solution {
 
     public static void printAllFields(Solution obj) {
         System.out.println("static void printAllFields");
-        System.out.println(obj.name);
+
         System.out.println(obj.i);
+        System.out.println(obj.name);
+
     }
 }
