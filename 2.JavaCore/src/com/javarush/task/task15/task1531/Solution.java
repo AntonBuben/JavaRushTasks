@@ -18,6 +18,7 @@ import java.math.BigInteger;
 2. Реализовать функцию factorial.
 3. Если введенное число меньше 0, то вывести 0.
 0! = 1
+)
 */
 
 public class Solution {
